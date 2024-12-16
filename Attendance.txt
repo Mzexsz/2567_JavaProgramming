@@ -1,4 +1,4 @@
 StudentId:2413110210
 StudentName:Manus Satirarat
-Date:09/12/2024
-Topic:String Method
+Date:16/12/2024
+Topic:Method
