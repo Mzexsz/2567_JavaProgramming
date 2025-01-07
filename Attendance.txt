@@ -1,4 +1,4 @@
 StudentId:2413110210
 StudentName:Manus Satirarat
-Date:23/12/2024
-Topic:Array and Array Method
+Date:13/01/2024
+Topic:Class and Object
