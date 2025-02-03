@@ -1,4 +1,4 @@
 StudentId:2413110210
 StudentName:Manus Satirarat
-Date:20/01/2024
-Topic:Encapsulation and Array Object
+Date:03/02/2024
+Topic:Array Object and Composition Concept
