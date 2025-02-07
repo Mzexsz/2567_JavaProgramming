@@ -1,57 +1,55 @@
-import java.util.Scanner;
-import java.text.*;
+import java.util.*;
 public class StockProduct {
-    public static void main(String[] args) {
-    	
-        Scanner scanner = new Scanner(System.in);
-        DecimalFormat df = new DecimalFormat("#,##0.00");
-        Product[] productList = new Product[4];
-
-        for (int i = 0; i < productList.length; i++) {
-            productList[i] = new Product();
-
-            System.out.print("Input product Id: ");
-            String id = scanner.nextLine();
-            productList[i].setId(id);
-
-            int unit;
-            System.out.print("Input product Unit: ");
-            unit = scanner.nextInt();
-            productList[i].setUnit(unit);
-
-            double price;
-            do {
-                System.out.print("Input product Price: ");
-                price = scanner.nextDouble();
-                if (price <= 0) {
-                    System.out.println("Price must be greater than 0. Please enter again.");
-                }
-            } while (price <= 0);
-            productList[i].setPrice(price);
-            System.out.println();
-            scanner.nextLine(); 
-        }
-        Line();
-
-        double totalValue = 0;
-        for (Product productLists : productList) {
-            double totalPrice = productLists.calculate();
-            System.out.println("Product ID: " + productLists.getId() + ", Total price = " + df.format(totalPrice) + " baht.");
-            totalValue += totalPrice;
-        }
-        
-        Line();
-        System.out.println("Total price of all products is " + df.format(totalValue) + " baht.");
-        scanner.close();
-    }
-    
-    public class CheckStockProduct {
-    	
-    }
-    
-    
-    public static void Line() {
-		for(int i = 1; i < 50; i++) {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Product[] productList = new Product[4];
+		
+		for(int i = 0; i < productList.length; i++) {
+			productList[i] = new Product();
+			
+			System.out.print("Input product Id    : ");
+			productList[i].setId(scanner.nextLine());
+			
+			System.out.print("Input product Unit  : ");
+			productList[i].setUnit(scanner.nextInt());
+			scanner.nextLine();
+			
+			while(productList[i].getUnit() <= 0) {
+				System.out.print("Input product Unit, again : ");
+				productList[i].setUnit(scanner.nextInt());
+				scanner.nextLine();
+			}
+			
+			System.out.print("Input product Price : ");
+			productList[i].setPrice(scanner.nextDouble());
+			scanner.nextLine();
+			
+			while(productList[i].getPrice() <= 0) {
+				System.out.print("Input product Price, again : ");
+				productList[i].setPrice(scanner.nextDouble());
+				scanner.nextLine();
+			}
+			
+			System.out.println();
+		}
+		 Line();
+		 
+		 double total = 0;
+		 for (Product _productList : productList) {
+			 System.out.printf("Product ID : %s, Total price = %,.2f baht.%n",  _productList.getId(),  _productList.calculate());
+			
+			total += _productList.calculate();
+		}
+		 
+		 Line();
+		 System.out.printf("Total price of all products is %,.2f baht.", total);
+		 
+		scanner.close();
+	}
+	
+	public static void Line() {
+		for(int i = 0; i < 40; i++) {
 			System.out.print("-");
 		}
 		System.out.println();
