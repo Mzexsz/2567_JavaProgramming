@@ -1,4 +1,4 @@
 StudentId:2413110210
 StudentName:Manus Satirarat
-Date:03/02/2024
-Topic:Array Object and Composition Concept
+Date:10/02/2024
+Topic:Inheritance Concept and Composition Concept
