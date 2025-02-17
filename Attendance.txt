@@ -1,4 +1,4 @@
 StudentId:2413110210
 StudentName:Manus Satirarat
-Date:10/02/2024
-Topic:Inheritance Concept and Composition Concept
+Date:17/02/2024
+Topic:Inheritance Concept and Abstract and Interface
