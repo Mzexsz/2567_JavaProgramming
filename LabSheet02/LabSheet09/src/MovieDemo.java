@@ -9,7 +9,6 @@ public class MovieDemo {
 		System.out.print("Input movie name  : ");
 		String movieName = scanner.nextLine();
 		System.out.println();
-		
 		System.out.print("Input director name   : ");
 		String directorName = scanner.nextLine();
 		System.out.print("Input director e-mail : ");
@@ -37,7 +36,6 @@ public class MovieDemo {
 		System.out.println();
 		
 		Director director = new Director(directorName, directorEmail, gender);
-		
 		Theater theater = new Theater(movieId, movieName, director, theaterNo);
 		System.out.println(theater);
 		
